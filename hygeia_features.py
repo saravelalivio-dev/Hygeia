@@ -33,22 +33,22 @@ EISENBERG: Dict[str, float] = {
     "S": -0.26, "T": -0.18, "W": 0.37, "Y": 0.02, "V": 0.54,
 }
 
-# pKa values (EMBOSS set) for the groups that gain or lose charge.
+pKa values (EMBOSS set) for the groups that gain or lose charge.
 PKA_BASIC = {"K": 10.00, "R": 12.00, "H": 6.00}
 
-# D and E only. Cysteine and tyrosine are weakly acidic and barely change the
-# charge at pH 7, but they shift pI by a whole unit, and leaving them out is
-# what reproduces both columns of Table 6.
+D and E only. Cysteine and tyrosine are weakly acidic and barely change the
+charge at pH 7, but they shift pI by a whole unit, and leaving them out is
+what reproduces both columns of Table 6.
 PKA_ACIDIC = {"D": 4.05, "E": 4.45}
 PKA_ACIDIC_EXTENDED = {"D": 4.05, "E": 4.45, "C": 9.00, "Y": 10.00}
 PKA_N_TERM = 9.60   # alpha-amino group, basic
 PKA_C_TERM = 3.65   # alpha-carboxyl group, acidic
 
-# Degrees of turn per residue in an alpha-helix.
+Degrees of turn per residue in an alpha-helix.
 HELIX_ANGLE_DEG = 100.0
 
-# Converts our mu_H values to the scale used in Table 6, for display only.
-# Measured as 1.572 +/- 0.034 across all nine peptides.
+Converts our mu_H values to the scale used in Table 6, for display only.
+Measured as 1.572 +/- 0.034 across all nine peptides.
 MOMENT_SCALE_RATIO = 1.572
 
 # Aliphatic index weights, relative to alanine.
