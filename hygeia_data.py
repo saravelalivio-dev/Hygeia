@@ -59,7 +59,7 @@ CONFUSION = {"TP": 66, "TN": 186, "FP": 25, "FN": 24}
 # --- Table 3 ---
 
 FEATURE_ABLATION = [
-    # label, n_features, cv_auroc, cv_sd, test_acc, test_mcc, test_auroc, test_auprc
+    label, n_features, cv_auroc, cv_sd, test_acc, test_mcc, test_auroc, test_auprc
     ("Physicochemical only",   12,  0.8597, 0.0145, 0.8140, 0.5620, 0.8682, 0.7315),
     ("PepFoundry embedding",  160,  0.8563, 0.0190, 0.8173, 0.5627, 0.8467, 0.6663),
     ("Fused matrix",          172,  0.8665, 0.0180, 0.8372, 0.6081, 0.8638, 0.6953),
