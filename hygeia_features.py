@@ -102,12 +102,12 @@ def net_charge(seq: str, ph: float = 7.0, c_term_amide: bool = True,
     if not s:
         return 0.0
 
-    positive = 1.0 / (1.0 + 10 ** (ph - PKA_N_TERM))      # free alpha-amino terminus
+    positive = 1.0 / (1.0 + 10 ** (ph - PKA_N_TERM))       free alpha-amino terminus
     for residue, pka in PKA_BASIC.items():
         positive += s.count(residue) / (1.0 + 10 ** (ph - pka))
 
     negative = 0.0
-    if not c_term_amide:                                  # free alpha-carboxyl
+    if not c_term_amide:                                   free alpha-carboxyl
         negative += 1.0 / (1.0 + 10 ** (PKA_C_TERM - ph))
     for residue, pka in (acidic or PKA_ACIDIC).items():
         negative += s.count(residue) / (1.0 + 10 ** (pka - ph))
